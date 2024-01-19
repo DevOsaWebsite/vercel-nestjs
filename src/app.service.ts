@@ -5,7 +5,7 @@ import { ConfigService } from '@nestjs/config';
 export class AppService {
   private readonly logger = new Logger(AppService.name);
   constructor(private configService: ConfigService) {}
-  getHello(): string {
+  async getHello(): Promise<string> {
     const message = this.configService.get<string>('MESSAGE');
     const NODE_ENV = this.configService.get<string>('NODE_ENV');
     const IS_PRODUCTION = this.configService.get<string>('IS_PRODUCTION');
