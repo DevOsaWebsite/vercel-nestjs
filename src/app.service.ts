@@ -5,7 +5,7 @@ import { Injectable } from '@nestjs/common';
 export class AppService {
   // private readonly logger = new Logger(AppService.name);
   // constructor(private readonly configService: ConfigService) {}
-  async getHello(): Promise<string> {
+  getHello() {
     // const message = this.configService.get<string>('MESSAGE');
     // const NODE_ENV = this.configService.get<string>('NODE_ENV');
     // const IS_PRODUCTION = this.configService.get<string>('IS_PRODUCTION');
