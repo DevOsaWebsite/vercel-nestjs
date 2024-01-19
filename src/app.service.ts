@@ -20,6 +20,6 @@ export class AppService {
       'from AppService';
 
     this.logger.log(`Message: ${result}`);
-    return result;
+    return 'result';
   }
 }
