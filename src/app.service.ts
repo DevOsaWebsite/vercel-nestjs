@@ -6,8 +6,7 @@ export class AppService {
   constructor(private configService: ConfigService) {}
   getHello(): string {
     const message = this.configService.get<string>('MESSAGE');
-    const IS_PRODUCTION =
-      this.configService.get<string>('NODE_ENV') === 'production';
+    const IS_PRODUCTION = this.configService.get<string>('IS_PROD');
 
     return message + ' ' + `${IS_PRODUCTION}`;
   }
