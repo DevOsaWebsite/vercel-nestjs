@@ -9,6 +9,6 @@ export class AppService {
     const IS_PRODUCTION =
       this.configService.get<string>('NODE_ENV') === 'production';
 
-    return message + ' ' + IS_PRODUCTION;
+    return message + ' ' + `${IS_PRODUCTION}`;
   }
 }
